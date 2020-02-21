@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Remove the Comments and fill up the relevant code -->
+
+<style type="text/css">
+
+body{
+background-color:#FFAACC;
+}
+td{
+    white-space:nowrap;
+}
+h1
+{
+color:#770080;
+font-family:courier new;
+font-style:italic;
+text-align:center;
+
+}
+
+form
+{
+margin :0 auto;
+width:300px;
+}
+
+#result
+{
+color:#770080;
+
+font-weight:bold;
+
+}
+</style>
+
+<title>Infotech College</title>
+<script>
+function calculateFeedbackRating()
+{
+   
+   /* Fill  the code  for Javascript function */
+   var x=document.getElementById("trainerFeedback").value;
+   var n=document.getElementById("trainerName").value;
+   var y;
+   if(x=="Excellent"){
+    y=5;
+   }
+   else if(x=="Very Good"){
+    y=4;
+   }
+   else if(x=="Good"){
+    y=3;
+   }
+   else if(x=="Average"){
+    y=2;
+   }
+   else if(x=="Below Average"){
+    y=1;
+   }
+  document.getElementById("result").innerHTML="Feedback rating of "+n+" is "+y;
+   return false;
+}
+
+</script>
+
+</head>
+<body>
+<!--Write necessary code wherever needed to complete this knock out code challenge  -->
+<h1>College Training Feedback Form <!-- Fill the text --> </h1>
+<form onsubmit="return calculateFeedbackRating()" >
+<table>
+
+<tr>
+<td>Participant Name</td>
+<td><input type="text" name="participantName" placeholder="Enter your name" required="required"></td>
+
+<tr>
+<td>College Name</td>
+<td><input type="text" name="collegeName" required="required"></td>
+</tr>
+
+<tr>
+<td>Participant Address</td>
+<td><textarea name="participantAddress"  rows="5" cols="20" required="required"></textarea></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="gender" value="Male" required="required">Male
+<input type="radio" name="gender" value="Female" required="required">Female
+</td>
+</tr>
+
+<tr>
+<td>Email ID</td>
+<td><input type="email" name="email" required="required"></td>
+</tr>
+
+
+
+<tr>
+<td>Mobile Number</td>
+<td><input type="text" pattern="[7-9]{1}[0-9]{9}" name="mobileNumber" required="required"></td>
+</tr>
+
+<tr>
+<td>Trainer’s Name</td>
+<td><input type="text" name="trainerName" id="trainerName" required="required"></td>
+</tr>
+
+<tr>
+<td>Course Name</td>
+<td><input type="text" name="courseName" required="required"></td>
+</tr>
+
+<tr>
+<td>Course Completion date</td>
+<td><input type="date" name="dateofcompletion" required="required"></td>
+</tr>
+
+<tr>
+<td>Trainer's Feedback</td>
+<td><input name="trainerFeedback" id="trainerFeedback" list="feedback" required>
+                                <datalist id="feedback">   
+                                <option value="Excellent">
+                                <option value="Very Good">
+                                <option value="Good">
+                                <option value="Average">
+                                <option value="Below Average">
+                                </datalist>
+
+</td>
+</tr>
+
+
+<tr>
+<td><input type="submit" value="Submit Feedback" name="submit" required></td>
+<td><input type="reset" value="Clear" name="reset" required></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<div id="result"></div>
+</td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
+
+
